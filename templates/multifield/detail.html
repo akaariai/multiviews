@@ -1,0 +1,8 @@
+<a href="{% url view.list_urlname %}">Back to liew view</a>
+<table>
+    {% for name, value in obj_data %}
+         <tr><th>{{name|capfirst}}</th><td>{{value|linebreaksbr}}</td></tr>
+    {% endfor %}
+    <tr><th></th><td><a href="{% url view.modify_urlname obj.pk %}">Edit</a></td></tr>
+    <tr><th></th><td><a href="{% url view.details_compact_urlname obj.pk %}">Compact details</a></td></tr>
+</table>

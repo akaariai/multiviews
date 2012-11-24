@@ -1,0 +1,6 @@
+<ul>
+    {% for obj in objects %}
+    <li><a href="{% url view.details_urlname obj.pk %}">{{obj}}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url view.create_urlname %}">Add another</a>

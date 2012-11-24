@@ -1,0 +1,21 @@
+A proof of concept of generic object multiviews.
+
+By using something like this you can somewhat easily create declaratively
+views for an object for single class.
+
+Usage of the examples:
+  1. Add 'multiview' to INSTALLED_APPS
+  2. syncdb
+  3. Link the generic multiviews to urls.py:
+     - for each multiview add a line like this:
+     SingleFieldViews.urls(prefix=r'singlefield/'),
+     to patterns
+  4. Use it! runserver + point browers to /singlefield/ or
+     /multifield/
+
+You can check the views.py for how the views are defined and how they work.
+The class SingleFieldViews is an example of a simple multiview.
+
+This is just a proof-of-concept. With some more meta-programming the
+declarative part of creating a new view could be DRYed up a little. More
+hooks would be needed. Make the templates actually nice. And so on.

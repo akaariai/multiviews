@@ -1,0 +1,6 @@
+<a href="{% url view.list_urlname %}">Back to list view</a>
+<table>
+    <tr><th>ID:</th><td>{{obj.id}}</td></tr>
+    <tr><th>F:</th><td>{{obj.f}}</td></tr>
+    <tr><th></th><td><a href="{% url view.modify_urlname obj.pk %}">Edit</a></td></tr>
+</table>
